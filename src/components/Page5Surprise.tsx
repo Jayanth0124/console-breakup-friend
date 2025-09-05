@@ -14,7 +14,7 @@ const Page5Surprise = () => {
 
   const handleDoorClick = () => {
     if (isDoorOpen) return;
-    
+
     setIsDoorOpen(true);
     setTimeout(() => setShowMessage(true), 1000);
     setTimeout(() => setShowFireworks(true), 1500);
@@ -73,24 +73,22 @@ const Page5Surprise = () => {
         {/* 3D Door */}
         <div className="relative perspective-1000">
           <div
-            className={`relative w-48 h-64 md:w-64 md:h-80 cursor-pointer transform transition-all duration-1000 hover:scale-105 ${
-              isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-            }`}
+            className={`relative w-48 h-64 md:w-64 md:h-80 cursor-pointer transform transition-all duration-1000 hover:scale-105 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+              }`}
             onClick={handleDoorClick}
           >
             {/* Door frame */}
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-600 to-yellow-800 rounded-lg shadow-2xl border-4 border-yellow-700"></div>
-            
+
             {/* Door */}
-            <div 
-              className={`absolute inset-2 bg-gradient-to-br from-amber-700 to-amber-900 rounded-md transition-all duration-1000 transform-gpu ${
-                isDoorOpen ? 'rotate-y-120 translate-x-8' : 'rotate-y-0'
-              }`}
+            <div
+              className={`absolute inset-2 bg-gradient-to-br from-amber-700 to-amber-900 rounded-md transition-all duration-1000 transform-gpu ${isDoorOpen ? 'rotate-y-120 translate-x-8' : 'rotate-y-0'
+                }`}
               style={{ transformOrigin: '0% 50%' }}
             >
               {/* Door handle */}
               <div className="absolute right-4 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-gold-400 rounded-full shadow-md"></div>
-              
+
               {/* Door details */}
               <div className="absolute inset-4 border-2 border-amber-600 rounded-md opacity-50"></div>
             </div>
@@ -117,14 +115,13 @@ const Page5Surprise = () => {
                 <div className="mb-6">
                   <Heart className="text-pink-300 mx-auto animate-pulse" size={48} fill="currentColor" />
                 </div>
-                
+
                 <h2 className="text-xl md:text-2xl font-light text-white mb-4">
                   You are stronger than you think
                 </h2>
-                
+
                 <p className="text-base md:text-lg text-purple-200 mb-6 leading-relaxed">
-                  Love will find you again, but first, you're learning to love yourself completely. 
-                  And that's the most beautiful love story of all.
+                  Braver than you believe, and far more precious than you know. Love will come to you again, but right now, life is teaching you to fall in love with your own heart. And through every tear, every silence, every night that feels too heavy ... I’ll be here. Not just as a friend, but as someone who will carry the weight with you, remind you of your light, and never let you feel alone. 🌹✨
                 </p>
 
                 <div className="flex justify-center space-x-4">
@@ -154,7 +151,7 @@ const Page5Surprise = () => {
             className="absolute bottom-4"
             style={{ left: `${15 + i * 15}%` }}
           >
-            <Flower 
+            <Flower
               className={`text-pink-400 animate-gentle-sway opacity-60 ${bloomedFlowers.has(i) ? 'animate-bloom' : ''}`}
               size={16}
               fill="currentColor"
