@@ -43,7 +43,7 @@ const AudioPlayer = () => {
         preload="auto"
       >
         {/* I've added a royalty-free placeholder audio file. You can replace this with your own! */}
-        <source src="https://cdn.pixabay.com/audio/2022/11/17/audio_877c4126c7.mp3" type="audio/mpeg" />
+        <source src="/bg.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
 

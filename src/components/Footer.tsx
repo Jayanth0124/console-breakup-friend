@@ -3,7 +3,7 @@ import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="relative w-full z-20 bg-transparent text-purple-400 text-xs py-4 px-4 mt-auto">
+    <footer className="relative w-full z-20 bg-transparent text-gray-600 text-xs py-4 px-4 mt-auto">
       <div className="flex flex-col items-center space-y-1">
         <p className="opacity-70">
           Designed by{' '}
@@ -11,7 +11,7 @@ const Footer = () => {
             href="http://www.jayanth.site"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-white transition-colors"
+            className="hover:text-black transition-colors"
           >
             Donavalli Jayanth
           </a>
@@ -21,7 +21,7 @@ const Footer = () => {
             href="https://github.com/Jayanth0124"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-70 hover:opacity-100 hover:text-white transition-all"
+            className="opacity-70 hover:opacity-100 hover:text-black transition-all"
             aria-label="GitHub"
           >
             <Github size={16} />
@@ -30,7 +30,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/donavalli-jayanth-344383234/"
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-70 hover:opacity-100 hover:text-white transition-all"
+            className="opacity-70 hover:opacity-100 hover:text-black transition-all"
             aria-label="LinkedIn"
           >
             <Linkedin size={16} />
