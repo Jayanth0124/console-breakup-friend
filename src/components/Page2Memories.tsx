@@ -110,11 +110,12 @@ const Page2Memories = () => {
 
         {/* Navigation hint */}
         <div
-          className={`absolute bottom-8 -translate-y-6 text-center transform transition-all duration-1000 delay-2000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+          className={`absolute bottom-16 text-center transform transition-all duration-1000 delay-2000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
         >
           <p className="text-purple-200 text-xs">Tap memories to reveal their wisdom</p>
         </div>
+
 
       </div>
     </div>

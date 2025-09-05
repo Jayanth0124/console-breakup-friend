@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Heart } from 'lucide-react';
 
 const Page1BrokenHeart = () => {
   const [isAnimating, setIsAnimating] = useState(false);
@@ -32,27 +31,61 @@ const Page1BrokenHeart = () => {
       {/* Main content */}
       <div className="text-center z-10 px-4 max-w-md mx-auto">
         {/* 3D Broken Heart */}
-        <div className={`relative mb-8 transform transition-all duration-2000 ${isAnimating ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}>
-          <div className="relative w-32 h-32 mx-auto">
-            {/* Heart crack effect */}
-            <div className="absolute inset-0 heart-crack-animation">
-              <Heart 
-                size={128} 
-                className="text-pink-300 heart-glow animate-pulse"
-                fill="currentColor"
+        <div className={`relative mb-8 w-40 h-40 mx-auto transition-all duration-2000 ${isAnimating ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}>
+          {/* Subtle Outer Glow */}
+          <div className="absolute inset-0 flex items-center justify-center animate-pulse opacity-50">
+            <div 
+              className="w-[110%] h-[110%] bg-pink-200"
+              style={{
+                maskImage: 'url(/heart.svg)',
+                maskSize: 'contain',
+                maskRepeat: 'no-repeat',
+                maskPosition: 'center',
+                filter: 'blur(10px)'
+              }}
+            />
+          </div>
+          
+          {/* Heart halves container */}
+          <div className="absolute inset-0">
+            {/* Left Half */}
+            <div className={`absolute inset-0 transition-transform duration-1500 ease-out ${isAnimating ? 'transform -translate-x-3 -rotate-2' : ''}`}>
+              <div 
+                className="w-full h-full bg-pink-300 heart-glow"
+                style={{
+                  maskImage: 'url(/heart.svg)',
+                  maskSize: 'contain',
+                  maskRepeat: 'no-repeat',
+                  maskPosition: 'center',
+                  WebkitMaskImage: 'url(/heart.svg)', // For Safari compatibility
+                  WebkitMaskSize: 'contain',
+                  WebkitMaskRepeat: 'no-repeat',
+                  WebkitMaskPosition: 'center',
+                  clipPath: 'polygon(0 0, 51% 0, 51% 100%, 0% 100%)'
+                }}
               />
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0.5 h-20 bg-purple-200 crack-line rotate-12"></div>
             </div>
             
-            {/* Glowing effect */}
-            <div className="absolute inset-0 heart-glow-outer animate-pulse opacity-50">
-              <Heart 
-                size={140} 
-                className="text-pink-200"
-                fill="currentColor"
+            {/* Right Half */}
+            <div className={`absolute inset-0 transition-transform duration-1500 ease-out ${isAnimating ? 'transform translate-x-3 rotate-2' : ''}`}>
+              <div
+                className="w-full h-full bg-pink-300 heart-glow"
+                style={{
+                  maskImage: 'url(/heart.svg)',
+                  maskSize: 'contain',
+                  maskRepeat: 'no-repeat',
+                  maskPosition: 'center',
+                  WebkitMaskImage: 'url(/heart.svg)', // For Safari compatibility
+                  WebkitMaskSize: 'contain',
+                  WebkitMaskRepeat: 'no-repeat',
+                  WebkitMaskPosition: 'center',
+                  clipPath: 'polygon(49% 0, 100% 0, 100% 100%, 49% 100%)'
+                }}
               />
             </div>
           </div>
+          
+          {/* The jagged crack line SVG has been removed from here */}
         </div>
 
         {/* Quote */}

@@ -1,11 +1,10 @@
-// src/components/Footer.tsx
 import React from 'react';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 left-0 right-0 z-20 bg-transparent text-purple-400 text-xs py-2 px-4"> {/* Increased padding slightly */}
-      <div className="flex flex-col items-center space-y-1"> {/* Reduced space-y slightly */}
+    <footer className="relative w-full z-20 bg-transparent text-purple-400 text-xs py-4 px-4 mt-auto">
+      <div className="flex flex-col items-center space-y-1">
         <p className="opacity-70">
           Designed by{' '}
           <a
@@ -36,7 +35,6 @@ const Footer = () => {
           >
             <Linkedin size={16} />
           </a>
-          
         </div>
       </div>
     </footer>
