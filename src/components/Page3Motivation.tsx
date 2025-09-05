@@ -13,11 +13,11 @@ const Page3Motivation = () => {
     { x: 10, y: 40, delay: 200, quote: "Even the darkest night will end ☀️" },
     { x: 10, y: 60, delay: 400, quote: "Your heart deserves peace 💖" },
 
-    // N
-    { x: 25, y: 20, delay: 600, quote: "Healing takes time, and that’s okay 🌿" },
-    { x: 25, y: 60, delay: 800, quote: "You are loved more than you know 💕" },
-    { x: 35, y: 20, delay: 1000, quote: "Storms make trees take deeper roots 🌳" },
-    { x: 35, y: 60, delay: 1200, quote: "Every setback is a setup for a comeback 🌟" },
+    // N (indices 3, 4, 5, 6) - Reordered for correct line drawing
+    { x: 25, y: 60, delay: 800, quote: "You are loved more than you know 💕" }, // Bottom-Left
+    { x: 25, y: 20, delay: 600, quote: "Healing takes time, and that’s okay 🌿" }, // Top-Left
+    { x: 35, y: 60, delay: 1200, quote: "Every setback is a setup for a comeback 🌟" }, // Bottom-Right
+    { x: 35, y: 20, delay: 1000, quote: "Storms make trees take deeper roots 🌳" }, // Top-Right
 
     // D
     { x: 50, y: 20, delay: 1400, quote: "Breathe. You are doing your best 🌼" },
