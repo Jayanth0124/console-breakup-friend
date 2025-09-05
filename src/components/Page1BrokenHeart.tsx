@@ -94,7 +94,7 @@ const Page1BrokenHeart = () => {
             Even broken hearts
           </h1>
           <h2 className="text-xl md:text-2xl font-extralight text-pink-200 mb-8">
-            can shine again ✨
+            can shine again Dear INDU✨
           </h2>
           
           <p className="text-sm md:text-base text-purple-200 leading-relaxed opacity-80">
@@ -105,7 +105,7 @@ const Page1BrokenHeart = () => {
         {/* Breathing indicator */}
         <div className={`mt-12 transform transition-all duration-2000 delay-2000 ${isAnimating ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
           <div className="breathing-circle mx-auto w-4 h-4 rounded-full bg-pink-300 opacity-60"></div>
-          <p className="text-xs text-purple-300 mt-2">Breathe and swipe to continue</p>
+          <p className="text-xs text-purple-300 mt-2">Breathe and click next to continue</p>
         </div>
       </div>
 

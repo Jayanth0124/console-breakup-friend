@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Image, X } from 'lucide-react';
+// Footer import is no longer needed here
 
 const Page2Memories = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null);
@@ -7,24 +8,24 @@ const Page2Memories = () => {
 
   const memories = [
     {
-      image: "https://images.pexels.com/photos/1024967/pexels-photo-1024967.jpeg?auto=compress&cs=tinysrgb&w=300&h=200",
-      message: "Every sunset you watched together was beautiful, but you'll see even more beautiful ones ahead."
+      image: "/image1.png",
+      message: "Sometimes, all we need is a hand to hold, reminding us we don’t have to face the storm alone. 🌸"
     },
     {
-      image: "https://images.pexels.com/photos/1252983/pexels-photo-1252983.jpeg?auto=compress&cs=tinysrgb&w=300&h=200",
-      message: "The laughter you shared was real. That joy lives within you, always."
+      image: "/image2.png",
+      message: "Tears are not weakness, they are proof of your strength to feel. My shoulder is yours, always.🩷"
     },
     {
-      image: "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=300&h=200",
-      message: "You gave love freely and fully. That capacity for love is your superpower."
+      image: "/image3.png",
+      message: "Healing isn’t about becoming who you were before, it’s about creating something stronger and more beautiful from the pieces. 🌹✨"
     },
     {
-      image: "https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=300&h=200",
-      message: "Every dream you shared made you brave. Your dreams are still valid and beautiful."
+      image: "/image4.png",
+      message: "One day, your smile will return without effort, and laughter will feel like home again. 💫"
     },
     {
-      image: "https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=300&h=200",
-      message: "You learned what love feels like. Now you know what to look for in the future."
+      image: "/image5.png",
+      message: "Every sunrise whispers that no night lasts forever .. hope is already waiting for you in the light. 🌅"
     }
   ];
 
@@ -34,6 +35,7 @@ const Page2Memories = () => {
   }, []);
 
   return (
+    // The structure is simplified, removing the outer flex container and the duplicate footer.
     <div className="h-screen bg-gradient-to-br from-indigo-900 via-purple-800 to-pink-900 relative overflow-hidden">
       {/* Floating sparkles */}
       <div className="absolute inset-0">
@@ -76,10 +78,12 @@ const Page2Memories = () => {
               onClick={() => setSelectedPhoto(index)}
             >
               <div className="relative w-24 h-24 md:w-32 md:h-32 bg-white p-1 rounded-lg shadow-2xl transform-gpu">
-                <div className="w-full h-full bg-gradient-to-br from-purple-200 to-pink-200 rounded-md flex items-center justify-center">
-                  <Image size={20} className="text-purple-600" />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 to-transparent rounded-lg"></div>
+                <img 
+                  src={memory.image} 
+                  alt={memory.message} 
+                  className="w-full h-full object-cover rounded-md"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg pointer-events-none"></div>
               </div>
             </div>
           ))}
@@ -97,9 +101,11 @@ const Page2Memories = () => {
               </button>
 
               <div className="text-center">
-                <div className="w-full h-32 bg-gradient-to-br from-purple-300 to-pink-300 rounded-lg mb-4 flex items-center justify-center">
-                  <Image size={32} className="text-purple-700" />
-                </div>
+                <img 
+                  src={memories[selectedPhoto].image} 
+                  alt={memories[selectedPhoto].message} 
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
                 <p className="text-white text-sm md:text-base leading-relaxed">
                   {memories[selectedPhoto].message}
                 </p>
@@ -113,11 +119,10 @@ const Page2Memories = () => {
           className={`absolute bottom-16 text-center transform transition-all duration-1000 delay-2000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
             }`}
         >
-          <p className="text-purple-200 text-xs">Tap memories to reveal their wisdom</p>
+          <p className="text-purple-200 text-xs">Tap a memory to reveal its title</p>
         </div>
-
-
       </div>
+      {/* The extra Footer component has been removed from here */}
     </div>
   );
 };

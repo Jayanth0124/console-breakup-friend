@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter , Instagram} from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -27,7 +27,16 @@ const Footer = () => {
             <Github size={16} />
           </a>
           <a
-            href="https://www.linkedin.com/in/donavalli-jayanth-344383234/"
+            href="https://www.instagram.com/jayanth.chowdary__"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="opacity-70 hover:opacity-100 hover:text-black transition-all"
+            aria-label="Instagram"
+          >
+            <Instagram size={16} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jayanth-donavalli"
             target="_blank"
             rel="noopener noreferrer"
             className="opacity-70 hover:opacity-100 hover:text-black transition-all"
